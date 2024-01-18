@@ -12,7 +12,29 @@
   box-sizing: content-box;
 }
 
-.bg {
+p,
+h1,
+h2,
+h3 {
+  font-family: var(--lato);
+  text-transform: uppercase;
+
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.icon--red {
+  color: var(--primary-color)
+}
+
+.bg-right {
   position: fixed;
   width: 50%;
   height: 100%;
@@ -20,10 +42,139 @@
   background-color: white;
 }
 
-.bg--grey {
+.bg-left {
   position: fixed;
   height: 100%;
   width: 50%;
   left: 0;
   background-color: var(--secondary-color);
+}
+
+.dice__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.dice {
+  background-color: white;
+  margin: auto;
+  height: 128px;
+  width: 128px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
+}
+
+.ui {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.red-point {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary-color);
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.player-ui {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-ui__container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.player-ui__score {
+  font-size: 5rem;
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.current-container {
+  padding: 16px 24px;
+  gap: 16px;
+  display: flex;
+  max-width: 128px;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.current-container h3 {
+  color: black;
+  font-weight: 400;
+}
+
+.current-container__score {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:576px) {
+  .player {
+    height: 35%;
+  }
+
+  .ui {
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+}
+
+.game-manager {
+  position: fixed;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.game-manager__new-game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roll,
+.hold {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 2rem;
+  text-transform: uppercase;
 }

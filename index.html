@@ -10,10 +10,61 @@
 
 <body>
   <main>
-    <div class="bg "></div>
-    <div class="bg--grey"></div>
+    <div class="bg-right"></div>
+    <div class="bg-left"></div>
 
+    <div class="ui">
+      <div class="player">
+        <div class="player-ui">
+          <div class="player-ui__container">
+            <h2>Player 1</h2>
+            <div class="red-point"></div>
+          </div>
+          <p class="player-ui__score">0</p>
+        </div>
+        <div class="current-container">
+          <h3>current</h3>
+          <p class="current-container__score">0</p>
+        </div>
+      </div>
+
+
+
+      <div class="game-manager">
+        <div class="game-manager__new-game">
+          <span class="iconify icon icon--red" data-icon="mdi-plus-circle-outline"></span>
+          <p>new game</p>
+        </div>
+        <div class="dice"></div>
+        <div class="action">
+          <div class="roll"><span class="iconify icon icon--red" data-icon="mdi-reload"></span>
+            <p>roll dice</p>
+          </div>
+          <div class="hold"><span class="iconify icon icon--red" data-icon="mdi-account"></span>
+            <p>hold</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="player">
+        <div class="player-ui">
+          <h2>Player 1</h2>
+          <p class="player-ui__score">0</p>
+        </div>
+
+        <div class="current-container">
+          <h3>current</h3>
+          <p class="current-container__score">0</p>
+        </div>
+      </div>
+
+
+    </div>
   </main>
+
+  <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </body>
 
 </html>
