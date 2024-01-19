@@ -4,16 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DICE GAME JS</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
+
+
+  <!-- MODAL -->
+  <dialog class="modal" id="modal">
+
+  </dialog>
+
   <main>
+    <!-- Background -->
     <div class="bg-right"></div>
     <div class="bg-left"></div>
 
     <div class="ui">
+      <!-- PLAYER 1 -->
       <div class="player">
         <div class="player-ui">
           <div class="player-ui__container">
@@ -28,6 +37,7 @@
         </div>
       </div>
 
+      <!-- BUTTONS  -->
       <div class="game-manager">
         <a href="#" onclick="newGame()" id="new-game-btn">
           <div class="game-manager__new-game">
@@ -35,21 +45,21 @@
             <p>new game</p>
           </div>
         </a>
-        <div class="dice "><img id="dice" src="images/dice/dice_5.png" alt="" srcset=""></div>
+        <div class="dice hidden "><img id="dice" src="images/dice/dice_5.png" alt="" srcset=""></div>
         <div class="action">
-          <a href="#" onclick="roll();" id="role-btn">
+          <a class="hidden" href="#" onclick="roll();" id="roll-btn">
             <div class="roll"><span class="iconify icon icon--red" data-icon="mdi-reload"></span>
               <p>roll dice</p>
             </div>
           </a>
-          <a href="#" onclick="hold();" id="hold-btn">
+          <a class="hidden" href="#" onclick="hold();" id="hold-btn">
             <div class="hold"><span class="iconify icon icon--red" data-icon="mdi-contain"></span>
               <p>hold</p>
             </div>
           </a>
         </div>
       </div>
-
+      <!-- PLAYER 2 -->
       <div class="player">
         <div class="player-ui">
           <div class="player-ui__container">
@@ -58,7 +68,6 @@
           </div>
           <p id="player-two-score" class="player-ui__score">0</p>
         </div>
-
         <div class="current-container">
           <h3>current</h3>
           <p id="player-two-score-current" class="current-container__score">0</p>
@@ -67,6 +76,7 @@
     </div>
   </main>
 
+  <script src="/modal.js"></script>
   <script src="/script.js"></script>
   <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </body>

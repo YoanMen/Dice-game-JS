@@ -1,3 +1,4 @@
+
 let isPlaying = false;
 
 
@@ -6,12 +7,12 @@ let globalTwo = 0;
 let currentPlayer = 1;
 let round = 0;
 
+
 const playerOneIcon = document.getElementById('player-one-icon');
 const playerTwoIcon = document.getElementById('player-two-icon');
 
-const newGameButton = document.getElementById('new-game-btn');
-const rollButton = document.getElementById('roll-btn');
 const holdButton = document.getElementById('hold-btn');
+const rollButton = document.getElementById('roll-btn');
 const dice = document.getElementById('dice');
 
 const playerOneScore = document.getElementById('player-one-score');
@@ -20,6 +21,7 @@ const playerOneCurrent = document.getElementById('player-one-score-current');
 const playerTwoCurrent = document.getElementById('player-two-score-current');
 
 
+dice.addEventListener('click', () => roll());
 
 // Reset all score and randomize player order.
 function newGame() {
@@ -68,18 +70,20 @@ function hold() {
     globalOne += round;
     playerOneScore.textContent = globalOne;
 
-    if (globalOne >= 100) {
-      alert('PLAYER ONE WIN');
+    if (globalOne >= 5) {
       isPlaying = false;
+      disableButtons();
+      showWin(1);
     }
 
   } else {
     globalTwo += round;
     playerTwoScore.textContent = globalTwo;
 
-    if (globalTwo >= 100) {
-      alert('PLAYER TWO WIN');
+    if (globalTwo >= 5) {
       isPlaying = false;
+      disableButtons();
+      showWin(2);
     }
   }
   switchPlayer();
@@ -134,6 +138,16 @@ function reset() {
   globalOne = 0;
   globalTwo = 0;
   round = 0;
+  holdButton.classList.remove('hidden');
+  rollButton.classList.remove('hidden');
+  dice.parentElement.classList.remove('hidden');
 
   isPlaying = true;
+}
+
+
+function disableButtons() {
+  holdButton.classList.add('hidden');
+  rollButton.classList.add('hidden');
+  dice.parentElement.classList.add('hidden');
 }

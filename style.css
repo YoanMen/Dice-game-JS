@@ -19,9 +19,16 @@ a {
 
 p,
 h1,
+li,
 h2,
 h3 {
   font-family: var(--lato);
+
+}
+
+h1,
+h2,
+h3 {
   text-transform: uppercase;
 
 }
@@ -29,6 +36,64 @@ h3 {
 h2 {
   font-weight: 300;
   font-size: 3rem;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  overflow: scroll;
+  position: fixed;
+  padding: 32px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 5%;
+  border: none;
+  z-index: 10;
+  width: 600px;
+  max-height: 800px;
+  max-width: 600px;
+}
+
+
+
+.modal__title {
+  font-size: 1.8rem;
+}
+
+.modal__title--win {
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.modal__btn {
+  margin: 0 auto;
+  width: 128px;
+  display: block;
+  padding: 8px;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 5%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  transition: opacity 0.3s;
+}
+
+.modal__rules {
+  padding: 16px 0;
+}
+
+.rules__list {
+  margin-top: 16px;
+  padding-left: 28px;
+}
+
+.modal__btn:hover {
+  opacity: 0.9;
 }
 
 .icon {
@@ -40,6 +105,7 @@ h2 {
 }
 
 .bg-right {
+  z-index: -100;
   position: fixed;
   width: 50%;
   height: 100%;
@@ -48,6 +114,7 @@ h2 {
 }
 
 .bg-left {
+  z-index: -100;
   position: fixed;
   height: 100%;
   width: 50%;
@@ -65,6 +132,7 @@ h2 {
 }
 
 .dice {
+  cursor: pointer;
   background-color: white;
   margin: auto;
   height: 128px;
@@ -125,7 +193,7 @@ h2 {
   padding: 16px 24px;
   gap: 16px;
   display: flex;
-  width: 168px;
+  width: 132px;
   flex-direction: column;
   align-items: center;
   background-color: var(--primary-color);
@@ -144,7 +212,6 @@ h2 {
 
 
 .game-manager {
-  position: fixed;
   height: 95%;
   display: flex;
   flex-direction: column;
@@ -221,4 +288,10 @@ h2 {
 
 .dice-animation {
   animation: diceAnimation 0.3s ease-in-out;
+}
+
+@media screen and (max-width:576px) {
+  .ui {
+    justify-content: space-between;
+  }
 }
