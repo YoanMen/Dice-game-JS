@@ -70,7 +70,7 @@ function hold() {
     globalOne += round;
     playerOneScore.textContent = globalOne;
 
-    if (globalOne >= 5) {
+    if (globalOne >= 100) {
       isPlaying = false;
       disableButtons();
       showWin(1);
@@ -80,7 +80,7 @@ function hold() {
     globalTwo += round;
     playerTwoScore.textContent = globalTwo;
 
-    if (globalTwo >= 5) {
+    if (globalTwo >= 100) {
       isPlaying = false;
       disableButtons();
       showWin(2);
