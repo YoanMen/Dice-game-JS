@@ -1,6 +1,3 @@
-
-
-
 const ruleModal = `
                   <h2 class="modal__title">Rules</h2>
                   <div class="modal__rules">
@@ -17,35 +14,27 @@ const ruleModal = `
                     </ul>
                   </div>
                   <button class="modal__btn" onclick="closeModal()">Close</button>
-                  `
+                  `;
 
-
-const modal = document.getElementById('modal');
-
+const modal = document.getElementById("modal");
 
 showRule();
 
 function showRule() {
-
   modal.innerHTML = ruleModal;
   modal.showModal();
-
 }
-
 
 function showWin(number) {
   const winModal = `
   <h2 class="modal__title--win">PLAYER ${number} WIN</h2>
   <button class="modal__btn" onclick="closeModal()">Close</button>
-  `
+  `;
 
   modal.innerHTML = winModal;
   modal.showModal();
 }
 
-
-
 function closeModal() {
   modal.close();
 }
-

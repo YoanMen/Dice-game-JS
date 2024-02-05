@@ -1,84 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DICE GAME JS</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DICE GAME JS</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <!-- MODAL -->
+    <dialog class="modal" id="modal"></dialog>
+    <main>
+      <!-- Background -->
+      <div class="bg-right"></div>
+      <div class="bg-left"></div>
 
-<body>
-
-
-  <!-- MODAL -->
-  <dialog class="modal" id="modal">
-
-  </dialog>
-
-  <main>
-    <!-- Background -->
-    <div class="bg-right"></div>
-    <div class="bg-left"></div>
-
-    <div class="ui">
-      <!-- PLAYER 1 -->
-      <div class="player">
-        <div class="player-ui">
-          <div class="player-ui__container">
-            <h2>Player 1</h2>
-            <div id="player-one-icon" class=""></div>
+      <div class="ui">
+        <!-- PLAYER 1 -->
+        <div class="player">
+          <div class="player-ui">
+            <div class="player-ui__container">
+              <h2>Player 1</h2>
+              <div id="player-one-icon" class=""></div>
+            </div>
+            <p id="player-one-score" class="player-ui__score">0</p>
           </div>
-          <p id="player-one-score" class="player-ui__score">0</p>
-        </div>
-        <div class="current-container">
-          <h3>current</h3>
-          <p id="player-one-score-current" class="current-container__score">0</p>
-        </div>
-      </div>
-
-      <!-- BUTTONS  -->
-      <div class="game-manager">
-        <a href="#" onclick="newGame()" id="new-game-btn">
-          <div class="game-manager__new-game">
-            <span class="iconify icon icon--red" data-icon="mdi-plus-circle-outline"></span>
-            <p>new game</p>
+          <div class="current-container">
+            <h3>current</h3>
+            <p id="player-one-score-current" class="current-container__score">
+              0
+            </p>
           </div>
-        </a>
-        <div class="dice hidden "><img id="dice" src="images/dice/dice_1.png" alt="" srcset=""></div>
-        <div class="action">
-          <a class="hidden" href="#" onclick="roll();" id="roll-btn">
-            <div class="roll"><span class="iconify icon icon--red" data-icon="mdi-reload"></span>
-              <p>roll dice</p>
+        </div>
+
+        <!-- BUTTONS  -->
+        <div class="game-manager">
+          <a href="#" id="new-game-btn">
+            <div class="game-manager__new-game">
+              <span
+                class="iconify icon icon--red"
+                data-icon="mdi-plus-circle-outline"
+              ></span>
+              <p>new game</p>
             </div>
           </a>
-          <a class="hidden" href="#" onclick="hold();" id="hold-btn">
-            <div class="hold"><span class="iconify icon icon--red" data-icon="mdi-contain"></span>
-              <p>hold</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- PLAYER 2 -->
-      <div class="player">
-        <div class="player-ui">
-          <div class="player-ui__container">
-            <h2>Player 2</h2>
-            <div id="player-two-icon" class=""></div>
+          <div class="dice hidden">
+            <img id="dice" src="images/dice/dice_1.png" alt="" srcset="" />
           </div>
-          <p id="player-two-score" class="player-ui__score">0</p>
+          <div class="action">
+            <a class="hidden" href="#" id="roll-btn">
+              <div class="roll">
+                <span
+                  class="iconify icon icon--red"
+                  data-icon="mdi-reload"
+                ></span>
+                <p>roll dice</p>
+              </div>
+            </a>
+            <a class="hidden" href="#" id="hold-btn">
+              <div class="hold">
+                <span
+                  class="iconify icon icon--red"
+                  data-icon="mdi-contain"
+                ></span>
+                <p>hold</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="current-container">
-          <h3>current</h3>
-          <p id="player-two-score-current" class="current-container__score">0</p>
+        <!-- PLAYER 2 -->
+        <div class="player">
+          <div class="player-ui">
+            <div class="player-ui__container">
+              <h2>Player 2</h2>
+              <div id="player-two-icon" class=""></div>
+            </div>
+            <p id="player-two-score" class="player-ui__score">0</p>
+          </div>
+          <div class="current-container">
+            <h3>current</h3>
+            <p id="player-two-score-current" class="current-container__score">
+              0
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <script src="script/modal.js"></script>
-  <script src="script/script.js"></script>
-  <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
-</body>
-
+    <script src="script/modal.js"></script>
+    <script src="script/script.js"></script>
+    <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  </body>
 </html>
